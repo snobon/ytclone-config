@@ -1,21 +1,15 @@
 {
-  "version": 1,
+  "version": 2,
   "minAppVersion": 1,
-  "updatedAt": "2026-11-02T00:00:00Z",
-  "notes": "Initial config - lockupViewModel format",
-  
   "endpoints": {
     "base": "https://www.youtube.com/youtubei/v1",
-    "clientName": "WEB_EMBEDDED_PLAYER",
+    "clientName": "WEB",
     "clientVersion": "2.20261029.11.00"
   },
-  
   "feed": {
     "browseId": "FEwhat_to_watch",
     "root": "contents.twoColumnBrowseResultsRenderer.tabs[0].tabRenderer.content.richGridRenderer.contents",
     "itemWrapper": "richItemRenderer.content.lockupViewModel",
-    "continuation": "continuationItemRenderer.continuationEndpoint.continuationCommand.token",
-    "validationHint": "lockupViewModel",
     "paths": {
       "videoId": "contentId",
       "title": "metadata.lockupMetadataViewModel.title.content",
@@ -28,55 +22,8 @@
       "isVerified": "metadata.lockupMetadataViewModel.metadata.contentMetadataViewModel.metadataRows[0].metadataParts[0].icon.name"
     }
   },
-  
-  "player": {
-    "streamingRoot": "streamingData",
-    "playabilityStatus": "playabilityStatus.status",
-    "formats": "streamingData.formats",
-    "adaptiveFormats": "streamingData.adaptiveFormats",
-    "expiresIn": "streamingData.expiresInSeconds",
-    "paths": {
-      "url": "url",
-      "signatureCipher": "signatureCipher",
-      "itag": "itag",
-      "quality": "qualityLabel",
-      "mimeType": "mimeType",
-      "contentLength": "contentLength",
-      "bitrate": "bitrate"
-    }
-  },
-  
-  "playerFallback": {
-    "embedUrl": "https://www.youtube.com/embed/{videoId}",
-    "webviewCapture": true,
-    "userAgent": "Mozilla/5.0 (Linux; Android 11) AppleWebKit/537.36 Chrome/120.0.0.0 Mobile Safari/537.36"
-  },
-  
-  "guide": {
-    "root": "items",
-    "section": "guideSectionRenderer.items",
-    "entry": "guideEntryRenderer",
-    "paths": {
-      "title": "formattedTitle.simpleText",
-      "icon": "icon.iconType",
-      "browseId": "navigationEndpoint.browseEndpoint.browseId"
-    }
-  },
-  
-  "shorts": {
-    "endpoint": "/reel/reel_item_watch",
-    "root": "overlay.reelPlayerOverlayRenderer",
-    "paths": {
-      "videoId": "playerOverlay.reelPlayerOverlayViewModel.metapanel.reelMetapanelViewModel.metadataItems[1].shortsVideoTitleViewModel.text.content",
-      "title": "playerOverlay.reelPlayerOverlayViewModel.metapanel.reelMetapanelViewModel.metadataItems[1].shortsVideoTitleViewModel.text.content",
-      "channelName": "playerOverlay.reelPlayerOverlayViewModel.metapanel.reelMetapanelViewModel.metadataItems[0].reelChannelBarViewModel.channelName.content",
-      "likes": "playerOverlay.reelPlayerOverlayViewModel.actionBar.reelActionBarViewModel.buttonViewModels[0].likeButtonViewModel.toggleButtonViewModel.toggleButtonViewModel.defaultButtonViewModel.buttonViewModel.title",
-      "comments": "playerOverlay.reelPlayerOverlayViewModel.actionBar.reelActionBarViewModel.buttonViewModels[1].buttonViewModel.title"
-    }
-  },
-  
   "headers": {
-    "userAgent": "Mozilla/5.0 (Linux; Android 11) AppleWebKit/537.36 Chrome/120.0.0.0 Mobile Safari/537.36",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
     "acceptLanguage": "en-IN,en;q=0.9",
     "origin": "https://www.youtube.com",
     "cookie": "SOCS=CAI;CONSENT=YES+1"
