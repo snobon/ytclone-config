@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": ["version", "feed", "player"],
+  "properties": {
+    "version": { "type": "integer", "minimum": 1 },
+    "minAppVersion": { "type": "integer", "minimum": 1 },
+    "feed": {
+      "type": "object",
+      "required": ["root", "itemWrapper", "paths"]
+    },
+    "player": {
+      "type": "object",
+      "required": ["streamingRoot", "formats"]
+    }
+  }
+}
